@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 import Icon from './Icon';
 import FlexWrapper from './FlexWrapper';
-import TechStack from './TechStack';
+import theme from '../styles/Theme';
 
 type ProjectPropsType = {
   title: string;
   text: string;
   src: string;
+  techs: string;
 };
 
-const Project = ({ title, text, src }: ProjectPropsType) => {
+const Project = ({ title, text, src, techs }: ProjectPropsType) => {
   return (
     <StyledProject>
       <Image src={src} alt={title}></Image>
       <ProjectDetails>
         <Title>{title}</Title>
         <Text>{text}</Text>
-        <TechStack otherTechs=", React, Styled Components" />
+        <TechStack>
+          <b>Tech stack:</b> HTML, CSS, {techs}
+        </TechStack>
         <FlexWrapper>
           <Link href="#">
             <FlexWrapper align="center">
@@ -38,9 +41,9 @@ const Project = ({ title, text, src }: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-  max-width: 350px;
+  max-width: 370px;
   width: 100%;
-  background-color: var(--color-grey-800);
+  background-color: ${theme.colors.secondaryBg};
   border-radius: 20px;
 `;
 
@@ -52,18 +55,52 @@ const Image = styled.img`
 `;
 
 const ProjectDetails = styled.div`
-  padding: 0 20px 20px 20px;
+  padding: 20px;
 `;
-const Title = styled.h3``;
-const Text = styled.p``;
+const Title = styled.h3`
+  font-family: 'Poppins';
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+`;
+const Text = styled.p`
+  margin: 20px 0;
+`;
+
+const TechStack = styled.p`
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+`;
 
 const Link = styled.a`
   margin-right: 30px;
-  color: var(--color-grey-100);
 `;
 
 const LinkText = styled.span`
-  margin-left: 5px;
+  display: inline-block;
+  padding-left: 5px;
+  position: relative;
+  z-index: 0;
+
+  &:hover {
+    &::before {
+      height: 5px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: inline-block;
+
+    width: 90%;
+    background-color: ${theme.colors.accentPrimary};
+
+    position: absolute;
+    left: 55%;
+    bottom: -1px;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
 `;
 
 export default Project;

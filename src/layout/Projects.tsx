@@ -4,29 +4,32 @@ import FlexWrapper from '../components/FlexWrapper';
 import Project from '../components/Project';
 import socialImg from '../assets/images/proj-1.jpg';
 import timerImg from '../assets/images/proj-2.png';
+import Container from '../components/Container';
 
 const Projects = () => {
   return (
     <StyledProjects>
-      <SectionTitle>Projects</SectionTitle>
-      <FlexWrapper justify="space-around">
-        <Project
-          title="Social Network"
-          text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-          src={socialImg}
-        />
-        <Project
-          title="Timer"
-          text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
-          src={timerImg}
-        />
-      </FlexWrapper>
+      <Container>
+        <SectionTitle>Projects</SectionTitle>
+        <FlexWrapper justify="space-between">
+          <Project
+            title="Social Network"
+            text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+            src={socialImg}
+            techs="TS, Styled Components"
+          />
+          <Project
+            title="Timer"
+            text="This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"
+            src={timerImg}
+            techs="TS, Styled Components"
+          />
+        </FlexWrapper>
+      </Container>
     </StyledProjects>
   );
 };
 
-const StyledProjects = styled.section`
-  min-height: 100vh;
-`;
+const StyledProjects = styled.section``;
 
 export default Projects;

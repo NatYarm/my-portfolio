@@ -6,7 +6,7 @@ const Menu = (props: { menuItems: Array<string> }) => {
       <ul>
         {props.menuItems.map((item, index) => (
           <li key={index}>
-            <a href="/">{item}</a>
+            <Link href="/">{item}</Link>
           </li>
         ))}
       </ul>
@@ -19,6 +19,10 @@ const StyledMenu = styled.nav`
     display: flex;
     gap: 30px;
   }
+`;
+
+const Link = styled.a`
+  color: var(--color-grey-200);
 `;
 
 export default Menu;

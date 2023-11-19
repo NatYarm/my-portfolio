@@ -1,29 +1,63 @@
 import styled from 'styled-components';
 import SectionTitle from '../components/SectionTitle';
-import FlexWrapper from '../components/FlexWrapper';
 import Button from '../components/Button';
-import Icon from '../components/Icon';
+import { BsEnvelope } from 'react-icons/bs';
+
+import Container from '../components/Container';
+import theme from '../styles/Theme';
 
 const Contact = () => {
   return (
     <StyledContact>
-      <SectionTitle>Contact Me</SectionTitle>
+      <Container>
+        <SectionTitle>Contact Me</SectionTitle>
 
-      <FlexWrapper justify="center">
-        <Button>
-          <FlexWrapper align="center">
-            <Icon iconId="email" viewBox="0 0 18 18" size="18" />
+        <StyledForm>
+          <Field placeholder="Name" />
+          <Field placeholder="Subject" />
+          <Field placeholder="Message" as="textarea" />
+
+          <Button btnType="outlinedWhite" type="submit">
+            <BsEnvelope />
             <BtnText>Send Message</BtnText>
-          </FlexWrapper>
-        </Button>
-      </FlexWrapper>
+          </Button>
+        </StyledForm>
+      </Container>
     </StyledContact>
   );
 };
 
-const StyledContact = styled.section`
-  height: 80vh;
+const StyledContact = styled.section``;
+
+const StyledForm = styled.form`
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+
+  textarea {
+    resize: none;
+    height: 150px;
+  }
 `;
+
+const Field = styled.input`
+  width: 100%;
+  background-color: ${theme.colors.formColor};
+  border: 1px solid ${theme.colors.borderColor};
+  padding: 7px 15px;
+
+  font-family: 'Poppins', sans-serif;
+  color: ${theme.colors.fontPrimary};
+
+  &:focus-visible {
+    outline: 1px solid ${theme.colors.borderColor};
+  }
+`;
+
 const BtnText = styled.span`
   margin-left: 10px;
 `;

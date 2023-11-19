@@ -16,14 +16,14 @@ const Skill = ({ skill }: SkillPropType) => {
 
 const StyledSkill = styled.div`
   width: 22%;
-  margin: 10px;
   text-align: center;
-  //background-color: #676666;
 `;
+
 const SkillTitle = styled.h4`
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 400;
+  padding: 12px 0 50px;
 `;
 
 export default Skill;

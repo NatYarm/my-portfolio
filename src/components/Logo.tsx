@@ -1,11 +1,11 @@
-import logo from '../assets/images/logo.png';
-import Icon from './Icon';
+type LogoPropsType = {
+  logo: string;
+};
 
-const Logo = () => {
+const Logo = ({ logo }: LogoPropsType) => {
   return (
     <a href="/">
       <img src={logo} alt="logo" />
-      {/* <Icon iconId="logo" /> */}
     </a>
   );
 };
