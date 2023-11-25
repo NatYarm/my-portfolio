@@ -41,10 +41,19 @@ const Project = ({ title, text, src, techs }: ProjectPropsType) => {
 };
 
 const StyledProject = styled.div`
-  max-width: 370px;
-  width: 100%;
+  width: 340px;
+  flex-grow: 1;
   background-color: ${theme.colors.secondaryBg};
   border-radius: 20px;
+
+  &:hover {
+    transform: scale(1.01);
+    transition: 0.3s;
+  }
+
+  @media ${theme.media.desktop} {
+    max-width: 500px;
+  }
 `;
 
 const Image = styled.img`
@@ -58,7 +67,7 @@ const ProjectDetails = styled.div`
   padding: 20px;
 `;
 const Title = styled.h3`
-  font-family: 'Poppins';
+  font-family: 'Rubik', sans-serif;
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: 1.2px;
@@ -68,7 +77,7 @@ const Text = styled.p`
 `;
 
 const TechStack = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 `;
 
@@ -91,10 +100,8 @@ const LinkText = styled.span`
   &::before {
     content: '';
     display: inline-block;
-
     width: 90%;
     background-color: ${theme.colors.accentPrimary};
-
     position: absolute;
     left: 55%;
     bottom: -1px;

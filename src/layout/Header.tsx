@@ -23,7 +23,6 @@ const Header = () => {
 const StyledHeader = styled.header`
   display: flex;
   height: 100px;
-  margin-bottom: 100px;
 `;
 
 export default Header;

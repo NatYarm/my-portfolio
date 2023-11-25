@@ -2,10 +2,13 @@
 //   colors: {
 //     primaryBg: '#1c1d25',
 //     secondaryBg: '#363636',
+
 //     accentPrimary: '#f06449',
 //     accentSecondary: '#ed4525',
+
 //     gradientPrimary: '#235aa6',
 //     gradientSecondary: '#213777',
+
 //     fontPrimary: '#f7f8f9',
 //     fontSecondary: '#b0b2c3',
 //   },
@@ -25,6 +28,12 @@ const theme = {
 
     formColor: '#232323',
     borderColor: '#363636',
+  },
+
+  media: {
+    tablet: 'screen and (max-width: 768px)',
+    mobile: 'screen and (max-width: 576px)',
+    desktop: 'screen and (min-width: 1140px)',
   },
 };
 

@@ -30,8 +30,8 @@ const btnTypes = {
   `,
 
   outlinedWhite: css<StyledBtnPropsType>`
-    color: var(--color-grey-100);
-    border: 2px solid var(--color-grey-100);
+    color: ${theme.colors.fontPrimary};
+    border: 2px solid ${theme.colors.fontPrimary};
     background-color: transparent;
 
     &:hover {
@@ -48,7 +48,7 @@ const Button = styled.button<StyledBtnPropsType>`
   text-align: center;
   padding: 10px 20px;
   font-family: 'Roboto Mono';
-  font-size: ${(props) => props.fontSize || '1.5rem'};
+  font-size: ${(props) => props.fontSize || '1.6rem'};
 
   &:hover {
     transition: background-color 0.2s ease-in-out;

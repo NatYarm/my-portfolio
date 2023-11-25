@@ -19,7 +19,7 @@ const MainPhoto = () => {
 };
 
 const Photo = styled.img`
-  height: 250px;
+  height: 28rem;
   border-radius: 50%;
   border: 10px solid transparent;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.8);

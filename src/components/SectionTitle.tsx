@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import theme from '../styles/Theme';
 
 const SectionTitle = styled.h2`
-  font-family: 'Poppins';
-  font-size: 2.8rem;
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
   letter-spacing: 1.2px;
   text-align: center;
   margin-bottom: 90px;

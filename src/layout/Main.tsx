@@ -6,13 +6,13 @@ import MainPhoto from '../components/MainPhoto';
 
 const Main = () => {
   return (
-    <StyledMain>
+    <StyledMain id="Home">
       <Container>
         <FlexWrapper
           align="center"
-          justify="space-between"
-          wrap="wrap"
-          gap="30px"
+          wrap="wrap-reverse"
+          columnGap="130px"
+          rowGap="130px"
         >
           <MainDetails>
             <Title>Web Developer</Title>
@@ -27,8 +27,9 @@ const Main = () => {
               <Button btnType="outlinedWhite">Contact</Button>
             </FlexWrapper>
           </MainDetails>
-
-          <MainPhoto />
+          <PhotoContainer>
+            <MainPhoto />
+          </PhotoContainer>
         </FlexWrapper>
       </Container>
     </StyledMain>
@@ -36,19 +37,27 @@ const Main = () => {
 };
 
 const StyledMain = styled.section`
-  display: flex;
+  padding-top: 100px;
   min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+`;
+
+const PhotoContainer = styled.div`
+  margin: 0 auto;
+  padding: 30px 0;
 `;
 
 const MainDetails = styled.div`
-  max-width: 450px;
+  max-width: 550px;
   width: 100%;
 `;
 
 const Title = styled.h1`
   text-transform: uppercase;
-  font-family: 'Poppins';
-  font-size: 2.2rem;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
   font-weight: 400;
   letter-spacing: 1.4px;
   color: var(--color-grey-100);
@@ -65,13 +74,11 @@ const Name = styled.h2`
   -webkit-text-fill-color: transparent;
   font-size: 5rem;
   line-height: 1.1;
-
   margin: 20px 0;
 `;
 
 const MainText = styled.p`
   margin-bottom: 30px;
-  font-size: 1.8rem;
   line-height: 1.6;
 `;
 

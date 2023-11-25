@@ -37,6 +37,7 @@ const Footer = () => {
       <Container>
         <FlexWrapper justify="center" align="center" direction="column">
           <Logo logo={logo} />
+
           <SocialList>
             {socialLinks.map((item) => {
               const { SocialIcon, link } = item;
@@ -75,7 +76,9 @@ const SocialList = styled.ul`
   gap: 30px;
   margin: 30px 0;
 `;
+
 const SocialItem = styled.li``;
+
 const SocialLink = styled.a`
   height: 30px;
   width: 30px;

@@ -7,23 +7,18 @@ type SkillPropType = {
 
 const Skill = ({ skill }: SkillPropType) => {
   return (
-    <StyledSkill>
+    <div>
       <Icon iconId={skill} />
       <SkillTitle>{skill}</SkillTitle>
-    </StyledSkill>
+    </div>
   );
 };
 
-const StyledSkill = styled.div`
-  width: 22%;
-  text-align: center;
-`;
-
 const SkillTitle = styled.h4`
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.4rem;
   font-weight: 400;
-  padding: 12px 0 50px;
+  padding-top: 10px;
 `;
 
 export default Skill;

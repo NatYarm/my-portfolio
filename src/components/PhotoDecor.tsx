@@ -11,10 +11,10 @@ const PhotoDecor = styled.div<PhotoDecorPropsType>`
   &::before {
     content: '';
     display: inline-block;
-    width: 270px;
-    height: 270px;
-    top: -8px;
-    left: -14px;
+    width: 28rem;
+    height: 28rem;
+    top: -0.5rem;
+    left: -0.5rem;
     border: 1px solid ${theme.colors.secondaryBg};
     transform: rotate(${(props) => props.rotationDeg});
     position: absolute;

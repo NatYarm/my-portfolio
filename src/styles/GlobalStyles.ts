@@ -11,34 +11,22 @@ box-sizing: border-box;
 }
 
 
-
-:root {
-  --color-brand-1: #13b0f5;
-	--color-brand-1-shadow: #0999d8;
-  --color-brand-2: #ca24b4;
-	--color-white: #fff;
-  --color-grey-100: #d9d9d9;
-  --color-grey-200: #a7a7a7;
-  --color-grey-800: #363636;
-  --color-grey-900: #191919;
-	--color-black: #000;
-}
-
 html {
-  font-size: 62.5%;
+  font-size: 10px;
 }
 
 body {
-  margin: 0;
-  background: var(--color-grey-900);
-  font-family:'Roboto Mono', monospace, 'Poppins', sans-serif, 'Rubik', 'Inter', sans-serif, 'Roboto';
+  background:  ${theme.colors.primaryBg};
+  font-family:'Roboto Mono', monospace;
+  font-size: 1.8rem;
+  color: ${theme.colors.fontPrimary};
+  min-width: 36rem;
+ 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: ${theme.colors.fontPrimary};
-
-
-  font-size: 1.6rem;
 }
+
+
 
 section {
 	padding-bottom: 100px;
@@ -71,6 +59,11 @@ input, textarea, button {
 	}
 }
 
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 8px
+  }
+}
 `;
 
 export default GlobalStyles;

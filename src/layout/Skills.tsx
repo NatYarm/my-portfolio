@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import FlexWrapper from '../components/FlexWrapper';
+import theme from '../styles/Theme';
 import Skill from '../components/Skill';
 import SectionTitle from '../components/SectionTitle';
-//import Progress from '../components/Progress';
 import Container from '../components/Container';
 
 const skills = [
@@ -13,7 +12,7 @@ const skills = [
   'react',
   'redux',
   'styled components',
-  'tailwind',
+  'bootstrap',
 ];
 
 const Skills = () => {
@@ -21,17 +20,12 @@ const Skills = () => {
     <SectionSkills>
       <Container>
         <SectionTitle>My Skills</SectionTitle>
-        {/* <SectionDetails>Technologies I've used in my projects</SectionDetails> */}
-        <FlexWrapper justify="space-between" wrap="wrap">
+
+        <SkillsWrapper>
           {skills.map((skill) => (
             <Skill skill={skill} key={skill} />
           ))}
-        </FlexWrapper>
-
-        {/* <SectionSubtitle>Languages I Speak</SectionSubtitle>
-        <Progress value={90} label="English" />
-        <Progress value={80} label="Dutch" />
-        <Progress value={100} label="Russian" /> */}
+        </SkillsWrapper>
       </Container>
     </SectionSkills>
   );
@@ -41,13 +35,14 @@ const SectionSkills = styled.section`
   text-align: center;
 `;
 
-// const SectionDetails = styled.p`
-//   margin-bottom: 20px;
-//   color: var(--color-grey-200);
-// `;
+const SkillsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
 
-// const SectionSubtitle = styled.h3`
-//   margin: 50px 0 20px;
-// `;
+  @media ${theme.media.tablet} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
 
 export default Skills;
