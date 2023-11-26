@@ -1,15 +1,16 @@
 import styled from 'styled-components';
-import Icon from './Icon';
+import Icon from '../../components/Icon';
 
 type SkillPropType = {
-  skill: string;
+  iconId: string;
+  title: string;
 };
 
-const Skill = ({ skill }: SkillPropType) => {
+const Skill = ({ iconId, title }: SkillPropType) => {
   return (
     <div>
-      <Icon iconId={skill} />
-      <SkillTitle>{skill}</SkillTitle>
+      <Icon iconId={iconId} />
+      <SkillTitle>{title}</SkillTitle>
     </div>
   );
 };

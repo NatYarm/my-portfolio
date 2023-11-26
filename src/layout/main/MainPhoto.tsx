@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import photo from '../assets/images/img1.jpeg';
+import photo from '../../assets/images/img1.jpeg';
 import PhotoDecor from './PhotoDecor';
 
 const MainPhoto = () => {

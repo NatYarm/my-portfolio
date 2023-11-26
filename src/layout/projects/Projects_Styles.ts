@@ -1,46 +1,7 @@
 import styled from 'styled-components';
-import Icon from './Icon';
-import FlexWrapper from './FlexWrapper';
-import theme from '../styles/Theme';
+import theme from '../../styles/Theme';
 
-type ProjectPropsType = {
-  title: string;
-  text: string;
-  src: string;
-  techs: string;
-};
-
-const Project = ({ title, text, src, techs }: ProjectPropsType) => {
-  return (
-    <StyledProject>
-      <Image src={src} alt={title}></Image>
-      <ProjectDetails>
-        <Title>{title}</Title>
-        <Text>{text}</Text>
-        <TechStack>
-          <b>Tech stack:</b> HTML, CSS, {techs}
-        </TechStack>
-        <FlexWrapper>
-          <Link href="#">
-            <FlexWrapper align="center">
-              <Icon iconId="link" size="18px" viewBox="0 0 24 24" />
-              <LinkText>demo</LinkText>
-            </FlexWrapper>
-          </Link>
-
-          <Link href="#">
-            <FlexWrapper align="center">
-              <Icon iconId="github-repo" size="16px" viewBox="0 0 24 24" />
-              <LinkText>code</LinkText>
-            </FlexWrapper>
-          </Link>
-        </FlexWrapper>
-      </ProjectDetails>
-    </StyledProject>
-  );
-};
-
-const StyledProject = styled.div`
+const Project = styled.div`
   width: 340px;
   flex-grow: 1;
   background-color: ${theme.colors.secondaryBg};
@@ -110,4 +71,13 @@ const LinkText = styled.span`
   }
 `;
 
-export default Project;
+export const S = {
+  Project,
+  Image,
+  ProjectDetails,
+  Title,
+  Text,
+  TechStack,
+  Link,
+  LinkText,
+};
