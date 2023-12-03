@@ -1,4 +1,6 @@
-import Contact from './layout/contacts/Contact';
+import BgParticles from './components/BgParticles';
+import GoTopBtn from './components/GoTopBtn';
+import Contacts from './layout/contacts/Contacts';
 import Footer from './layout/footer/Footer';
 import Header from './layout/header/Header';
 import Main from './layout/main/Main';
@@ -8,12 +10,14 @@ import Skills from './layout/skills/Skills';
 function App() {
   return (
     <div className="App">
+      <BgParticles />
       <Header />
       <Main />
       <Skills />
       <Projects />
-      <Contact />
+      <Contacts />
       <Footer />
+      <GoTopBtn />
     </div>
   );
 }

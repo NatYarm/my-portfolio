@@ -1,10 +1,10 @@
 import Menu from './Menu';
 import { S } from './HeaderMenu_Styles';
 
-const DesktopMenu = (props: { menuItems: Array<string> }) => {
+const DesktopMenu = () => {
   return (
     <S.DesktopMenu>
-      <Menu menuItems={props.menuItems} />
+      <Menu />
     </S.DesktopMenu>
   );
 };

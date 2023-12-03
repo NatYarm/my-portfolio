@@ -29,13 +29,13 @@ body {
 
 
 section {
-	padding-bottom: 100px;
+	padding: 100px 0;
 }
 
 a {
 	text-decoration: none;
 	color: ${theme.colors.fontPrimary};
-	cursor: pointer;
+	
 
 	&:focus-visible {
     outline: 1px solid ${theme.colors.fontSecondary};

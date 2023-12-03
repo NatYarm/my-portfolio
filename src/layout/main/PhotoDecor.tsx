@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import theme from '../../styles/Theme';
 
 type PhotoDecorPropsType = {
   rotationDeg: string;
@@ -15,7 +14,7 @@ const PhotoDecor = styled.div<PhotoDecorPropsType>`
     height: 28rem;
     top: -0.5rem;
     left: -0.5rem;
-    border: 1px solid ${theme.colors.secondaryBg};
+    border: 1px solid #242630;
     transform: rotate(${(props) => props.rotationDeg});
     position: absolute;
     z-index: -1;

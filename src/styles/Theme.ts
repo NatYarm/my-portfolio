@@ -17,7 +17,8 @@
 const theme = {
   colors: {
     primaryBg: '#191919',
-    secondaryBg: '#2d2d2d',
+    secondaryBg: '#1c1d25',
+    ternaryBg: '#2d2f3b',
 
     accentPrimary: '#13b0f5',
     accentSecondary: '#ca24b4',
@@ -26,14 +27,17 @@ const theme = {
     fontPrimary: '#d9d9d9',
     fontSecondary: '#a7a7a7',
 
-    formColor: '#232323',
-    borderColor: '#363636',
+    borderColor: '#4f5268',
   },
 
   media: {
     tablet: 'screen and (max-width: 768px)',
     mobile: 'screen and (max-width: 576px)',
     desktop: 'screen and (min-width: 1140px)',
+  },
+
+  animations: {
+    transition: '.25s ease-in-out',
   },
 };
 

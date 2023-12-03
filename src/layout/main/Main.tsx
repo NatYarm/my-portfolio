@@ -6,13 +6,13 @@ import { S } from './Main_Styles';
 
 const Main = () => {
   return (
-    <S.Main id="Home">
+    <S.Main id="home">
       <Container>
         <FlexWrapper
           align="center"
           wrap="wrap-reverse"
           columnGap="80px"
-          rowGap="100px"
+          rowGap="120px"
         >
           <S.MainDetails>
             <S.Title>Web Developer</S.Title>

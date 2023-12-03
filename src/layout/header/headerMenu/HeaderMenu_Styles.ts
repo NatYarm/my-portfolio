@@ -1,18 +1,92 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import theme from '../../../styles/Theme';
+import { Link } from 'react-scroll';
 
-//Mobile Menu
-const MobileMenuPopup = styled.div`
+// Menu Styles
+
+const MenuList = styled.ul``;
+
+const NavLink = styled(Link)`
+  color: ${theme.colors.fontSecondary};
+  font-family: Rubik, sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 3px;
+    z-index: 2;
+
+    background-color: ${theme.colors.accentSecondary};
+    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1) 0.15s;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 3px;
+    z-index: 2;
+    background-color: ${theme.colors.accentPrimary};
+    transition: all 0.25s cubic-bezier(0.694, 0.048, 0.335, 1);
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+    &::after {
+      width: 100%;
+    }
+    color: ${theme.colors.basicWhite};
+    transition: ${theme.animations.transition};
+  }
+
+  &.active {
+    color: ${theme.colors.basicWhite};
+  }
+`;
+
+//Mobile Menu Styles
+
+const MobileMenu = styled.nav``;
+
+const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  width: 200px;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: ${theme.colors.secondaryBg};
+  opacity: 0.9;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 999;
+  transform: translateX(-100%);
+  transition: all 0.5s ease-in-out;
 
-  ul {
-    height: 100%;
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      transform: translateX(0);
+    `};
+
+  ${NavLink} {
+    color: ${theme.colors.fontPrimary};
+    font-size: 2.4rem;
+  }
+
+  ${MenuList} {
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,16 +97,14 @@ const MobileMenuPopup = styled.div`
 
 const CloseButton = styled.button`
   position: fixed;
-  height: 30px;
-  width: 30px;
-  top: 12px;
-  right: 12px;
+  top: 20px;
+  right: 20px;
 `;
 
 const closeIconStyles = {
-  color: ` ${theme.colors.fontPrimary}`,
-  width: '24px',
-  height: '24px',
+  color: `${theme.colors.fontPrimary}`,
+  width: '30px',
+  height: '30px',
 };
 
 const burgerIconStyles = {
@@ -41,18 +113,27 @@ const burgerIconStyles = {
   height: '30px',
 };
 
-const BurgerButton = styled.button``;
+const BurgerButton = styled.button<{ isOpen: boolean }>`
+  ${(props) =>
+    props.isOpen &&
+    css<{ isOpen: boolean }>`
+      display: none;
+    `};
+`;
 
-// Desktop Menu
+// Desktop Menu Styles
 
 const DesktopMenu = styled.nav`
-  ul {
+  ${MenuList} {
     display: flex;
     gap: 30px;
   }
 `;
 
 export const S = {
+  MenuList,
+  NavLink,
+  MobileMenu,
   MobileMenuPopup,
   CloseButton,
   closeIconStyles,

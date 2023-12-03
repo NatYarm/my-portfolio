@@ -2,28 +2,32 @@ import { IoClose } from 'react-icons/io5';
 import { FiMenu } from 'react-icons/fi';
 import Menu from './Menu';
 import { S } from './HeaderMenu_Styles';
+import { useState } from 'react';
+import SocialLinks from '../../../components/SocialLinks';
 
-type propsType = {
-  menuItems: Array<string>;
-  handleMobileMenu: VoidFunction;
-  isOpen: boolean;
-};
+const MobileMenu = () => {
+  const [openMenu, setOpenMenu] = useState(false);
 
-const MobileMenu = ({ menuItems, handleMobileMenu, isOpen }: propsType) => {
+  const handleMobileMenu = () => {
+    setOpenMenu((open) => !open);
+  };
+
   return (
-    <nav>
-      <S.BurgerButton onClick={handleMobileMenu}>
-        <FiMenu style={S.burgerIconStyles} />
-      </S.BurgerButton>
-      {isOpen && (
-        <S.MobileMenuPopup>
+    <>
+      <S.MobileMenu>
+        <S.BurgerButton onClick={handleMobileMenu} isOpen={openMenu}>
+          <FiMenu style={S.burgerIconStyles} />
+        </S.BurgerButton>
+
+        <S.MobileMenuPopup isOpen={openMenu} onClick={() => setOpenMenu(false)}>
           <S.CloseButton onClick={handleMobileMenu}>
             <IoClose style={S.closeIconStyles} />
           </S.CloseButton>
-          <Menu menuItems={menuItems} color="#d9d9d9" />
+          <Menu />
+          <SocialLinks />
         </S.MobileMenuPopup>
-      )}
-    </nav>
+      </S.MobileMenu>
+    </>
   );
 };
 

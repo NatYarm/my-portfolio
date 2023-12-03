@@ -1,32 +1,25 @@
 import styled from 'styled-components';
-import theme from '../../../styles/Theme';
+import { S } from './HeaderMenu_Styles';
 
-type propsType = {
-  color?: string;
-};
+const menuItems = ['home', 'skills', 'projects', 'contact'];
 
-const Menu = (props: { menuItems: Array<string>; color?: string }) => {
+const Menu = () => {
   return (
-    <ul>
-      {props.menuItems.map((item, index) => (
-        <li key={index}>
-          <Link href={item} color={props.color}>
-            {item}
-          </Link>
-        </li>
+    <S.MenuList>
+      {menuItems.map((item, index) => (
+        <ListItem key={index}>
+          <S.NavLink activeClass="active" to={item} smooth={true} spy={true}>
+            {item.charAt(0).toUpperCase() + item.slice(1)}
+          </S.NavLink>
+        </ListItem>
       ))}
-    </ul>
+    </S.MenuList>
   );
 };
 
-const Link = styled.a<propsType>`
-  color: ${(props) => props.color || theme.colors.fontSecondary};
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-
-  &:hover {
-    color: ${theme.colors.basicWhite};
-  }
+const ListItem = styled.li`
+  position: relative;
+  z-index: 0;
 `;
 
 export default Menu;

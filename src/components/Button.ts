@@ -1,14 +1,14 @@
 import styled, { css } from 'styled-components';
 import theme from '../styles/Theme';
 
-type StyledBtnPropsType = {
+type BtnPropsType = {
   color?: string;
   fontSize?: string;
   btnType: 'primary' | 'outlined' | 'outlinedWhite';
 };
 
 const btnTypes = {
-  primary: css<StyledBtnPropsType>`
+  primary: css<BtnPropsType>`
     color: ${theme.colors.basicWhite};
     background-color: ${theme.colors.accentPrimary};
 
@@ -17,7 +17,7 @@ const btnTypes = {
     }
   `,
 
-  outlined: css<StyledBtnPropsType>`
+  outlined: css<BtnPropsType>`
     color: ${theme.colors.accentPrimary};
     border: 2px solid ${theme.colors.accentPrimary};
     background-color: transparent;
@@ -29,7 +29,7 @@ const btnTypes = {
     }
   `,
 
-  outlinedWhite: css<StyledBtnPropsType>`
+  outlinedWhite: css<BtnPropsType>`
     color: ${theme.colors.fontPrimary};
     border: 2px solid ${theme.colors.fontPrimary};
     background-color: transparent;
@@ -42,16 +42,17 @@ const btnTypes = {
   `,
 };
 
-const Button = styled.button<StyledBtnPropsType>`
+const Button = styled.button<BtnPropsType>`
   border: none;
   border-radius: 30px;
   text-align: center;
   padding: 10px 20px;
   font-family: 'Roboto Mono';
   font-size: ${(props) => props.fontSize || '1.6rem'};
+  z-index: 99;
 
   &:hover {
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
   }
 
   &:focus-visible {

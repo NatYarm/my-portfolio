@@ -17,7 +17,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <SectionSkills>
+    <SectionSkills id="skills">
       <Container>
         <SectionTitle>My Skills</SectionTitle>
 
@@ -37,6 +37,8 @@ const Skills = () => {
 
 const SectionSkills = styled.section`
   text-align: center;
+  background-color: ${theme.colors.secondaryBg};
+  position: relative;
 `;
 
 const SkillsWrapper = styled.div`

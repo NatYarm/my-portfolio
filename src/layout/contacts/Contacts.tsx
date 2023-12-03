@@ -2,11 +2,11 @@ import { BsEnvelope } from 'react-icons/bs';
 import SectionTitle from '../../components/SectionTitle';
 import Button from '../../components/Button';
 import Container from '../../components/Container';
-import { S } from './Contact_Styles';
+import { S } from './Contacts_Styles';
 
-const Contact = () => {
+const Contacts = () => {
   return (
-    <section>
+    <S.ContactsSection id="contact">
       <Container>
         <SectionTitle>Contact Me</SectionTitle>
 
@@ -15,14 +15,14 @@ const Contact = () => {
           <S.Field placeholder="Subject" />
           <S.Field placeholder="Message" as="textarea" />
 
-          <Button btnType="outlinedWhite" type="submit">
+          <Button btnType="outlined" type="submit">
             <BsEnvelope />
             <S.BtnText>Send Message</S.BtnText>
           </Button>
         </S.Form>
       </Container>
-    </section>
+    </S.ContactsSection>
   );
 };
 
-export default Contact;
+export default Contacts;
