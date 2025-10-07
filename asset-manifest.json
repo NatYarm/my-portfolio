@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/my-portfolio/static/js/main.c04f20ae.js",
+    "main.js": "/my-portfolio/static/js/main.d3178beb.js",
     "static/media/bg.png": "/my-portfolio/static/media/bg.00edebc9dc6c25bb8db6.png",
     "static/media/logo-joyfy.png": "/my-portfolio/static/media/logo-joyfy.7bc21ce5198e830ecac6.png",
     "static/media/profile-img.jpg": "/my-portfolio/static/media/profile-img.dea7426902a03dffb42b.jpg",
@@ -8,9 +8,9 @@
     "static/media/logo-flashcards.png": "/my-portfolio/static/media/logo-flashcards.2af2519513d1f8c355f2.png",
     "static/media/icons-sprite.svg": "/my-portfolio/static/media/icons-sprite.46e3b36fceab1eed17828e0716253c78.svg",
     "index.html": "/my-portfolio/index.html",
-    "main.c04f20ae.js.map": "/my-portfolio/static/js/main.c04f20ae.js.map"
+    "main.d3178beb.js.map": "/my-portfolio/static/js/main.d3178beb.js.map"
   },
   "entrypoints": [
-    "static/js/main.c04f20ae.js"
+    "static/js/main.d3178beb.js"
   ]
 }
