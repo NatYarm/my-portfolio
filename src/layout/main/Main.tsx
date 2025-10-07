@@ -5,26 +5,45 @@ import MainPhoto from './MainPhoto';
 import { S } from './Main_Styles';
 
 const Main = () => {
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Natalia_Tjoonk_Eng.pdf';
+    link.download = 'Natalia_Tjoonk_Eng.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handleContactClick = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <S.Main id="home">
       <Container>
         <FlexWrapper
           align="center"
           wrap="wrap-reverse"
-          columnGap="80px"
+          columnGap="60px"
           rowGap="120px"
         >
           <S.MainDetails>
             <S.Title>Web Developer</S.Title>
-            <S.Name>Natalia Yarmolinskaya</S.Name>
+            <S.Name>Natalia Tjoonk | Yarmolinskaya</S.Name>
             <S.MainText>
-              I'm a front-end developer living in Emmen, Netherlands. I make web
-              applications with React and TypeScript.
+              I’m a motivated front-end developer with hands-on experience in
+              React, Next.js, TypeScript, and Redux. I enjoy building
+              responsive, user-friendly interfaces and continuously improving my
+              skills through projects and collaboration.
             </S.MainText>
 
             <FlexWrapper gap="20px">
-              <Button btnType="outlined">Download CV</Button>
-              <Button btnType="outlinedWhite">Contact</Button>
+              <Button btnType="outlined" onClick={handleDownloadCV}>
+                Download CV
+              </Button>
+              <Button btnType="outlinedWhite" onClick={handleContactClick}>
+                Contact
+              </Button>
             </FlexWrapper>
           </S.MainDetails>
           <S.PhotoContainer>

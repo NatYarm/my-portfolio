@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import photo from '../../assets/images/img1.jpeg';
+//import photo from '../../assets/images/img1.jpeg';
+import photo from '../../assets/images/profile-img.jpg';
 import PhotoDecor from './PhotoDecor';
 
 const MainPhoto = () => {
@@ -19,7 +20,7 @@ const MainPhoto = () => {
 };
 
 const Photo = styled.img`
-  height: 28rem;
+  height: 35rem;
   border-radius: 50%;
   border: 10px solid transparent;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.8);

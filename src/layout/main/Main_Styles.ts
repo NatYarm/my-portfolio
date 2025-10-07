@@ -13,7 +13,7 @@ const PhotoContainer = styled.div`
 `;
 
 const MainDetails = styled.div`
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
 `;
 
