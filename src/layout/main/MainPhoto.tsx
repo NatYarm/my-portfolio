@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-//import photo from '../../assets/images/img1.jpeg';
 import photo from '../../assets/images/profile-img.jpg';
 import PhotoDecor from './PhotoDecor';
 
