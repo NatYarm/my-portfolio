@@ -12,7 +12,7 @@ const skills = [
   { iconId: 'react', title: 'react' },
   { iconId: 'redux', title: 'redux' },
   { iconId: 'styled-components', title: 'styled components' },
-  { iconId: 'bootstrap', title: 'bootstrap' },
+  { iconId: 'tailwind', title: 'tailwind' },
 ];
 
 const Skills = () => {
