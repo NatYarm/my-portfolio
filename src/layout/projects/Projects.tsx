@@ -32,7 +32,7 @@ const projects = [
   },
   {
     title: 'The Wild Oasis',
-    text: 'A full-stack e-commerce application with shopping cart, payment integration, and admin dashboard.',
+    text: 'A hotel management application built with React, designed to streamline cabin bookings, guest management, and hotel operations.',
     src: oasisLogo,
     techs: 'React, Tanstack query, Supabase, Styled Components',
     links: {

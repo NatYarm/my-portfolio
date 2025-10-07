@@ -68,9 +68,12 @@
     "webpack-manifest-plugin": "4.0.2",
     "workbox-webpack-plugin": "6.4.1"
   },
+  "homepage": "https://NatYarm.github.io/my-portfolio",
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "node scripts/test.js"
   },
   "eslintConfig": {
@@ -93,7 +96,8 @@
   },
   "devDependencies": {
     "@types/styled-components": "5.1.26",
-    "babel-plugin-styled-components": "2.0.7"
+    "babel-plugin-styled-components": "2.0.7",
+    "gh-pages": "^6.3.0"
   },
   "jest": {
     "roots": [
