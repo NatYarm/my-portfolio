@@ -6,12 +6,7 @@ import { S } from './Main_Styles';
 
 const Main = () => {
   const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/Natalia_Tjoonk_Eng.pdf';
-    link.download = 'Natalia_Tjoonk_Eng.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open('/my-portfolio/Natalia_Tjoonk_Eng.pdf', '_blank');
   };
 
   const handleContactClick = () => {
