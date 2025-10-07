@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 import { BsEnvelopeFill } from 'react-icons/bs';
-import { FaGithub, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import theme from '../styles/Theme';
 
 const socialLinks = [
-  { SocialIcon: BsEnvelopeFill, link: 'mailto:yarmnat7@gmail.com' },
+  { SocialIcon: BsEnvelopeFill, link: 'mailto:tjoonkn@gmail.com' },
   { SocialIcon: FaGithub, link: 'https://github.com/NatYarm' },
   {
     SocialIcon: FaLinkedinIn,
-    link: 'www.linkedin.com/in/natalia-yarmolinskaya-55054a29a',
+    link: 'https://www.linkedin.com/in/natalia-yarmolinskaya',
   },
-  { SocialIcon: FaTwitter, link: 'https://twitter.com/Nat_Yarm' },
 ];
 
 const SocialLinks = () => {
@@ -20,7 +19,7 @@ const SocialLinks = () => {
         const { SocialIcon, link } = item;
         return (
           <li key={link}>
-            <SocialLink href={link}>
+            <SocialLink href={link} target="_blank" rel="noopener noreferrer">
               <SocialIcon style={iconStyles} />
             </SocialLink>
           </li>

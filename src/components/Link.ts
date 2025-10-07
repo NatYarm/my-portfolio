@@ -4,6 +4,8 @@ import theme from '../styles/Theme';
 type LinkPropsType = {
   active?: boolean;
   color?: string;
+  target?: string;
+  rel?: string;
 };
 
 const Link = styled.a<LinkPropsType>`

@@ -43,7 +43,6 @@ const btnTypes = {
 };
 
 const Button = styled.button<BtnPropsType>`
-  border: none;
   border-radius: 30px;
   text-align: center;
   padding: 10px 20px;
