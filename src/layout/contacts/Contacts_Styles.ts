@@ -43,4 +43,22 @@ const BtnText = styled.span`
   margin-left: 10px;
 `;
 
-export const S = { ContactsSection, Form, Field, BtnText };
+const SuccessMsg = styled.div`
+  color: green;
+  text-align: center;
+  margin-bottom: 20px;
+`;
+const ErrorMsg = styled.div`
+  color: red;
+  text-align: center;
+  margin-bottom: 20px;
+`;
+
+export const S = {
+  ContactsSection,
+  Form,
+  Field,
+  BtnText,
+  SuccessMsg,
+  ErrorMsg,
+};
