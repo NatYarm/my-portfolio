@@ -6,7 +6,7 @@ import { S } from './Main_Styles';
 
 const Main = () => {
   const handleDownloadCV = () => {
-    window.open('/my-portfolio/Natalia_Tjoonk_Eng.pdf', '_blank');
+    window.open('/my-portfolio/N.Yarmolinskaya_CV.pdf', '_blank');
   };
 
   const handleContactClick = () => {
@@ -24,7 +24,7 @@ const Main = () => {
         >
           <S.MainDetails>
             <S.Title>Web Developer</S.Title>
-            <S.Name>Natalia Tjoonk | Yarmolinskaya</S.Name>
+            <S.Name>Natalia Yarmolinskaya</S.Name>
             <S.MainText>
               I’m a motivated front-end developer with hands-on experience in
               React, Next.js, TypeScript, and Redux. I enjoy building

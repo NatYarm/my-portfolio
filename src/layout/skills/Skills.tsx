@@ -11,7 +11,7 @@ const skills = [
   { iconId: 'typescript', title: 'typescript' },
   { iconId: 'react', title: 'react' },
   { iconId: 'redux', title: 'redux' },
-  { iconId: 'styled-components', title: 'styled components' },
+  { iconId: 'nextjs', title: 'next.js' },
   { iconId: 'tailwind', title: 'tailwind' },
 ];
 

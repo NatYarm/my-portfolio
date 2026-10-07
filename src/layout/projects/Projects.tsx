@@ -1,4 +1,4 @@
-import socialImg from '../../assets/images/logo-joyfy.png';
+import readmark from '../../assets/images/bookshelf.webp';
 import flashcardsImg from '../../assets/images/logo-flashcards.png';
 import oasisLogo from '../../assets/images/wild-oasis-logo.png';
 import oasisWebsite from '../../assets/images/bg.png';
@@ -9,27 +9,26 @@ import { S } from './Projects_Styles';
 
 const projects = [
   {
-    title: 'Joyfy',
-    text: 'A modern social media platform built with Next.js, featuring real-time messaging, user profiles, and social interactions.',
-    src: socialImg,
-    techs: 'TS, React, Next.js, RTK Query, SCSS Modules, Radix',
+    title: 'Readmark',
+    text: 'A read-later app that lets you save, scrape, and summarize web content powered by AI. ',
+    src: readmark,
+    techs: 'TS, TanstackStart, BetterAuth, Firecrawl, Tailwind, Shadcn',
     links: {
-      demoLink: 'https://joyfy.online/en',
-      githubLink: 'https://github.com/SuperManagerOfJoyfy/joyfy',
+      demoLink: 'https://readmark-seven.vercel.app',
+      githubLink: 'https://github.com/NatYarm/Readmark',
     },
-    imageType: 'logo' as const,
   },
-  {
-    title: 'Flashcards',
-    text: 'An interactive flashcard application built with React, designed to help users learn and memorize information through repetition and active recall.',
-    src: flashcardsImg,
-    techs: 'TS, React, RTK Query, CSS Modules',
-    links: {
-      demoLink: 'https://flashcards-olive.vercel.app/',
-      githubLink: 'https://github.com/NatYarm/flashcards',
-    },
-    imageType: 'logo' as const,
-  },
+  // {
+  //   title: 'Flashcards',
+  //   text: 'An interactive flashcard application built with React, designed to help users learn and memorize information through repetition and active recall.',
+  //   src: flashcardsImg,
+  //   techs: 'TS, React, RTK Query, CSS Modules',
+  //   links: {
+  //     demoLink: 'https://flashcards-olive.vercel.app/',
+  //     githubLink: 'https://github.com/NatYarm/flashcards',
+  //   },
+  //   imageType: 'logo' as const,
+  // },
   {
     title: 'The Wild Oasis',
     text: 'A hotel management application built with React, designed to streamline cabin bookings, guest management, and hotel operations.',
